@@ -13,6 +13,16 @@ def slow_print(text, speed=0.04, newline=True):
         time.sleep(speed)       
     if newline:
         print() 
+weights = [6, 7, 6, 5, 1]
+
+foodGrades = [
+  "perfect",
+  "good",
+  "odd",
+  "bad",
+  "in the face of Jeffery Epstein!",
+  ""
+]
 
 prod = [
   "Oprah Winfrey",
@@ -61,7 +71,7 @@ def start_of_game():
   advertisement()
   time.sleep(2)
   slow_print("These are your options: ", newline=False)
-  options = input("1. Bake Muffins\n2. Bake Cupcakes\n3. Bake Cookies\n4. Bake a Cake\n5. Bake a Pie\n6. Bake some Bread\n7. Dan\n8.Deliver Food/n Choose an option (1-8): ")
+  options = input("1. Bake Muffins\n2. Bake Cupcakes\n3. Bake Cookies\n4. Bake a Cake\n5. Bake a Pie\n6. Bake some Bread\n7. Dan\n8.Deliver Food\n Choose an option (1-8): ")
   if options == "1":
     bake_muffins()
 
@@ -91,6 +101,11 @@ def start_of_game():
     start_of_game()
 
 def bake_muffins():
+  slow_print("Making Batter...")
+  time.sleep(1)
+  slow_print("Putting muffins in oven...")
+  time.sleep(2)
+  slow_print("Your muffins came out" + )
   start_of_game()
 
 def bake_cupcakes():
