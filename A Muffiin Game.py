@@ -47,10 +47,8 @@ def start_of_game():
   time.sleep(2)
   slow_print("In this game, you run a cafe")
   time.sleep(2)
-  slow_print("Why are you still here dude play the damn game")
-  time.sleep(2)
-  slow_print("Theese are your options: ", newline=False)
-  options = input("1. Bake Muffins\n2. Bake Cupcakes\n3. Bake Cookies\n\n4. Bake a Cake\n5. Bake a Pie\n6. Bake some Bread\n7. Dan\n8.Deliver Food/n Choose an option (1-8): ")
+  slow_print("These are your options: ", newline=False)
+  options = input("1. Bake Muffins\n2. Bake Cupcakes\n3. Bake Cookies\n4. Bake a Cake\n5. Bake a Pie\n6. Bake some Bread\n7. Dan\n8.Deliver Food/n Choose an option (1-8): ")
   if options == "1":
     bake_muffins()
 
