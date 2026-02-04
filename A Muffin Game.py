@@ -74,6 +74,51 @@ def fight():
   hp = 100
   slow_print(f"CoNgLoMeRaTe HP = {c_hp}")
   slow_print(f"Your HP = {hp}")
+  slow_print("You have 3 options: \n1. Pummel \n2. Dropkick \n3. Needle")
+  while c_hp > 0 and hp > 0:
+    choice = input("Choose an option (1-3): ")
+    if choice == "1":
+      damage = random.randint(15, 50)
+      for rounds in range(10):
+        time.sleep(0.1)
+        print("HIT")
+      c_hp -= damage
+      slow_print(f"You pummel the conglomerate for {damage} damage!")
+    elif choice == "2":
+      damage = random.randint(15, 60)
+      c_hp -= damage
+      slow_print(f"You dropkick the conglomerate for {damage} damage!")
+    elif choice == "3":
+      damage = random.randint(15, 50)
+      c_hp -= damage
+      slow_print(f"You needle the conglomerate for {damage} damage!")
+      hp += random.randint(5, 15)
+    else:
+      slow_print("Invalid option. Please choose a number between 1 and 3.")
+      continue
+    if c_hp > 0:
+      c_damage = random.randint(10, 30)
+      c_hp += random.randint(5, 15)
+      slow_print(f"Conglomerate used H3x0r! it deals {c_damage} damage to you but heals itself for {random.randint(5, 15)} HP!")
+    if c_hp <= 0:
+      slow_print("You defeated the conglomerate! Congratulations!")
+      break
+      
+    if hp <= 0:
+      slow_print("You died. But hey, guess what! you died")
+      break
+    
+    # Conglomerate's turn to attack
+    c_damage = random.randint(10, 20)
+    hp -= c_damage
+    slow_print(f"The conglomerate attacks you for {c_damage} damage!")
+    advertisement()
+    
+    if hp <= 0:
+      slow_print("You were defeated by the conglomerate. Better luck next time!")
+      break
+  
+  start_of_game()
 
 def advertisement():
   print("=======================================\n MANDITORY BAKERY ADVERTISEMENT BREAK \n========================================")
