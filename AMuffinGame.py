@@ -166,8 +166,9 @@ def fight():
     if hp <= 0:
       slow_print("You were defeated by the conglomerate. Better luck next time!")
       break
-def narnia():
 
+def narnia():
+  pass
   
   start_of_game()
 
